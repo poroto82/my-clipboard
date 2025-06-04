@@ -1,0 +1,44 @@
+# Binarios y ejecutables
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+my-clipboard
+clip82
+
+# Archivos de prueba
+*.test
+*.out
+
+# Archivos de cobertura
+*.cover
+coverage.txt
+
+# Dependencias
+/vendor/
+
+# Archivos de IDE y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de log
+*.log
+
+# Archivos de Docker
+.docker/
+
+# Archivos de configuración local
+.env
+.env.local
+
+# Archivos de compilación
+/bin/
+/dist/ 
