@@ -11,10 +11,39 @@ Una aplicación de sincronización de portapapeles que permite compartir el cont
 
 ## Requisitos
 
+### Requisitos del Sistema
 - Go 1.16 o superior
 - Redis
-- Wayland (wl-copy/wl-paste)
+- Wayland
+- wl-clipboard (paquete que proporciona wl-copy y wl-paste)
 - Docker y Docker Compose (opcional, para ejecutar Redis)
+
+### Instalación de Dependencias del Sistema
+
+#### Fedora/RHEL:
+```bash
+sudo dnf install wl-clipboard
+```
+
+#### Ubuntu/Debian:
+```bash
+sudo apt install wl-clipboard
+```
+
+#### Arch Linux:
+```bash
+sudo pacman -S wl-clipboard
+```
+
+#### Gentoo:
+```bash
+sudo emerge --ask wl-clipboard
+```
+
+### Requisitos de Go
+```bash
+go mod download
+```
 
 ## Instalación
 
@@ -65,6 +94,13 @@ La aplicación acepta los siguientes parámetros:
 - Sin argumentos: Usa la dirección por defecto (192.168.2.3:6379)
 - `[redis_host:port]`: Especifica una dirección personalizada de Redis
 - `--help` o `-h`: Muestra la ayuda
+
+## Solución de Problemas
+
+Si encuentras errores relacionados con `wl-copy` o `wl-paste`:
+1. Verifica que estás ejecutando en un entorno Wayland
+2. Asegúrate de que wl-clipboard está instalado correctamente
+3. Verifica que los comandos `wl-copy` y `wl-paste` están disponibles en tu PATH
 
 ## Contribuir
 
